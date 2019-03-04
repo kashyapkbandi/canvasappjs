@@ -1,0 +1,11 @@
+{
+  "name": "canvasappjs",
+  "version": "1.0.0",
+  "description": "Test app to work with salesforce canvas application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kashyapkalakbandi",
+  "license": "ISC"
+}
