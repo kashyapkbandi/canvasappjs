@@ -1,10 +1,25 @@
-<script type="text/javascript" src="https://.salesforce.com/canvas/sdk/js/44.0/canvas-all.js"></script>
-<script type="text/javascript">
-    // callback to access the OAuth access token and context object
-    Sfdc.canvas(function() {
-        // Save the token
-        Sfdc.canvas.oauth.token(window.signedRequestJson.oauthToken);
-        window.alert("hello, " + window.signedRequestJson.context.user.fullName);
-          console.log("hello, " + window.signedRequestJson.context.user.fullName);
-    });
-</script>
+
+
+  const path = require('path');
+  const express = require('express');
+  var app = express();
+  const port = process.env.PORT || 3000;
+  // __dirname - stores path to directory
+  app.use(express.static(path.join(__dirname,'/assets')));
+
+  app.set('view engine','hbs');
+
+//setting up route
+
+app.get('',(req,res)=>{
+res.render('index', {
+title:'Weather App',
+author:'Kashyap Kalakbandi'
+
+})
+});
+  app.listen(3000,()=>{
+  //  console.log(__dirname);
+    console.log('Server is up on port 3000');
+
+  });
