@@ -1,16 +1,25 @@
 {
   "name": "canvasappjs",
   "version": "1.0.0",
-  "description": "Test app to work with salesforce canvas application",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "kashyapkalakbandi",
-  "license": "ISC",
+  "description": "\"# canvasappjs\"",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
-    "hbs": "^4.0.3",
-    "path": "^0.12.7"
-  }
+    "sfdc": "0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashyapkbandi/canvasappjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashyapkbandi/canvasappjs/issues"
+  },
+  "homepage": "https://github.com/kashyapkbandi/canvasappjs#readme"
 }
