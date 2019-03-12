@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 // __dirname - stores path to directory
 app.use(express.static(__dirname + '/assets'));
 const viewPath = path.join(__dirname,'./templates/views')
-
+console.log(viewPath);
 // tell express to use templates instead of views. 
 app.set('views',viewPath);
 
@@ -22,6 +22,4 @@ res.render('page2',{viewName:'index'  });
 });
 app.set('view engine','hbs');
 
-app.listen(port, ()=>{
-  console.log('Server is up and Running on port 3000');
-});
+app.listen(port);
