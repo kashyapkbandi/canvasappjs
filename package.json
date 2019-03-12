@@ -5,6 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "path": "^0.12.7",
     "sfdc": "0.0.1"
   },
   "devDependencies": {},
