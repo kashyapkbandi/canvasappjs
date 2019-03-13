@@ -23,7 +23,10 @@ res.render('index');
 
 
 app.get('/page2',(req,res)=>{
-res.render('page2');
+res.render('page2',{
+  jsPath: __dirname+'/assets/app.js'
+  
+});
 });
 
 app.set('view engine','hbs');

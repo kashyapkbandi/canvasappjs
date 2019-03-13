@@ -1,10 +1,10 @@
-document.getElementById('#submitButton').addEventListener('click',handleBack);
+document.getElementById('submitButton').addEventListener('click',handleBack);
 
 
-function handleBack(){
+function handleBack(e){
 
   console.log("Hello");
 
   window.history.back();
-
+  e.preventDefault();
  }   
