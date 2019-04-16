@@ -29,6 +29,16 @@ res.render('page2',{
 });
 });
 
+// Live agent chat page route
+
+app.get('/liveagentchat',(req,res)=>{
+  res.render('Liveagent_LACorp',{
+    jsPath: __dirname+'/assets/app.js'
+    
+  });
+  });
+  
+
 app.set('view engine','hbs');
 
 
