@@ -38,6 +38,15 @@ app.get('/liveagentchat',(req,res)=>{
   });
   });
   
+// Get Endpoint
+
+app.get('/getmock',(req,res)=>{
+  res.send('getmock',{
+        "Status":200,
+        "Message": "You have successfully hit this endpoint"
+
+  });
+  });
 
 app.set('view engine','hbs');
 
