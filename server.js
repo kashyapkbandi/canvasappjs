@@ -42,8 +42,8 @@ app.get('/liveagentchat',(req,res)=>{
 
 app.get('/getmock',(req,res)=>{
   res.send('getmock',{
-        "Status":200,
-        "Message": "You have successfully hit this endpoint"
+        status:200,
+        sessage: "You have successfully hit this endpoint"
 
   });
   });
