@@ -80,7 +80,7 @@
 			}
 		);
 	};
-
+testAddCustomEventListener();
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://lacorp-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
@@ -92,11 +92,7 @@
 		initESW('https://service.force.com');
 	}
 	
-
-</script>
-
-<script type="text/javascript">
-        function testAddCustomEventListener() {
+ function testAddCustomEventListener() {
             //These values are for example purposes only
             var type = 'myCustomEventType'
             liveagent.chasitor.addCustomEventListener(type, customEventReceived)
@@ -108,8 +104,9 @@
             alert('A custom event of type: ' + eventType + ' has been received with the following data: ' + eventData);
         };
         
-        testAddCustomEventListener();
+        
 </script>
+ 
 
 
 
