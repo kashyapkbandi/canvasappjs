@@ -94,6 +94,22 @@
 </script>
 
 
+<script type="text/javascript">
+        function testAddCustomEventListener() {
+            //These values are for example purposes only
+            var type = 'myCustomEventType'
+            liveagent.chasitor.addCustomEventListener(type, customEventReceived)
+        } 
+        
+        function customEventReceived(result) {
+            eventType = result.getType();
+            eventData = result.getData();
+            alert('A custom event of type: ' + eventType + ' has been received with the following data: ' + eventData);
+        };
+        
+        testAddCustomEventListener();
+</script>
+
 
 
 
