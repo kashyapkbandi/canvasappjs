@@ -38,6 +38,18 @@ app.get('/liveagentchat',(req,res)=>{
   });
   });
   
+
+//lightning out page route
+
+
+app.get('/lightningout',(req,res)=>{
+  res.render('Lout',{
+    jsPath: __dirname+'/assets/app.js'
+    
+  });
+  });
+
+
 // Get Endpoint
 
 app.get('/getmock',(req,res)=>{
