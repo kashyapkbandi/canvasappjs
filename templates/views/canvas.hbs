@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="Cache-Control" content="max-age=31536000"/>
+    <meta http-equiv="Cache-Control" content="Expires=<%= new Date(Date.now() + 31536000).toUTCString() %>"/>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Canvas App with Signed request</title>
+
+
+
+</head>
+<body>
+<main role="main" class="container">
+        <h1>A Simple Canvas App for Testing</h1><br/><br/><br/>
+        <span>User : <%= context.user.firstName %></span><br/>
+
+        <% if (locals.context.environment.record.attributes) { %>
+          <span>Object : <%= context.environment.record.attributes.type  %></span><br/>
+        <% } %>
+
+        <% if (locals.context.environment.record.Id) { %>
+          <span>Id : <%= context.environment.record.Id %></span><br/>
+        <% } %>
+        <br/><br/>
+        <button name="fireRequest" onclick="getSignedRequest(event);">Get Refreshed Signed Request </button>
+
+    </main>
+
+<script type="text/javascript" src="https://login.salesforce.com/canvas/sdk/js/45.0/canvas-all.js"></script>
+<script type="text/javascript">
+(function(){
+console.log(Sfdc);
+})();
+function getSignedRequest(event){
+event.preventDefault();
+Sfdc.canvas.client.refreshSignedRequest(function(data) {
+    if (data.status === 200) {
+        var signedRequest =  data.payload.response;
+        var part = signedRequest.split('.')[1];
+        var obj = JSON.parse(Sfdc.canvas.decode(part));
+        console.log(signedRequest);
+        console.log(part);
+        console.log(obj);
+    }
+});
+}
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

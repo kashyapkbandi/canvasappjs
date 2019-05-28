@@ -5,8 +5,10 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
-    "hbs": "^4.0.3",
+    "hbs": "^4.0.4",
     "path": "^0.12.7",
+    "request": "^2.88.0",
+    "salesforce-signed-request": "0.0.1",
     "sfdc": "0.0.1"
   },
   "devDependencies": {},
