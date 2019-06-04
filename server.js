@@ -55,7 +55,6 @@ app.get('/getmock',(req,res)=>{
 // Get Endpoint
 
 app.get('/getmock',(req,res)=>{
-  console.log(req);
   res.send({
         status:200,
         sessage: "You have successfully hit this endpoint"
