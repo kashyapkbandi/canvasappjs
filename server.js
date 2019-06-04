@@ -48,16 +48,6 @@ app.get('/getmock',(req,res)=>{
         "Status":200,
         "Message": "You have successfully hit this endpoint"
 
-
-
-//lightning out page route
-
-
-app.get('/lightningout',(req,res)=>{
-  res.render('Lout',{
-    jsPath: __dirname+'/assets/app.js'
-    
->>>>>>> c124d854201fbc982f9cda62650d23fe253f4832
   });
   });
 
@@ -75,11 +65,11 @@ app.get('/getmock',(req,res)=>{
 
 
 // POST Mock
-app.post('/getmock',(req,res)=>{
+
+app.get('/getmock',(req,res)=>{
   console.log(req);
+
   });
-
-
 
   app.get('/canvas',(req,res)=>{
     res.render('canvas');
