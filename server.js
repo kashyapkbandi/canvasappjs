@@ -66,7 +66,7 @@ app.get('/getmock',(req,res)=>{
 
 // POST Mock
 
-app.get('/getmock',(req,res)=>{
+app.post('/getmock',(req,res)=>{
   console.log(req);
 
   });
