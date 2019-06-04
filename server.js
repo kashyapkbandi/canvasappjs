@@ -55,6 +55,11 @@ app.get('/getmock',(req,res)=>{
 
 app.post('/postmock',(req,res)=>{
   console.log(req);
+  res.send('getmock',{
+    "Status":200,
+    "Message": req
+
+});
   });
 
   app.get('/canvas',(req,res)=>{
