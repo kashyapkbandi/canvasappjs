@@ -80,7 +80,7 @@
 			}
 		);
 	};
-
+//testAddCustomEventListener();
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://lacorp-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
@@ -91,7 +91,22 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	
+ function testAddCustomEventListener() {
+            //These values are for example purposes only
+            var type = 'myCustomEventType'
+            liveagent.chasitor.addCustomEventListener(type, customEventReceived)
+        } 
+        
+        function customEventReceived(result) {
+            eventType = result.getType();
+            eventData = result.getData();
+            alert('A custom event of type: ' + eventType + ' has been received with the following data: ' + eventData);
+        };
+        
+        
 </script>
+<<<<<<< HEAD
 
 
 <script type="text/javascript">
@@ -119,6 +134,9 @@
 
 
 
+=======
+ 
+>>>>>>> c124d854201fbc982f9cda62650d23fe253f4832
 
 
 
