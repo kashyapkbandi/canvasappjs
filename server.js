@@ -68,7 +68,6 @@ app.get('/getmock',(req,res)=>{
 
 app.post('/getmock',(req,res)=>{
   console.log(req);
-
   });
 
   app.get('/canvas',(req,res)=>{
