@@ -3,6 +3,7 @@ const path = require('path');
 const hbs = require('hbs'); 
 const decode = require('salesforce-signed-request');
 const request = require('request');
+var xml = require('xml');
 
 
 var app = express();
@@ -27,46 +28,45 @@ res.render('index');
 
 app.get('/page2',(req,res)=>{
 res.render('page2',{
-  jsPath: __dirname+'/assets/app.js'
-  
+jsPath: __dirname+'/assets/app.js'
+
 });
 });
 
 // Live agent chat page route
 
 app.get('/liveagentchat',(req,res)=>{
-  res.render('Liveagent_LACorp',{
-    jsPath: __dirname+'/assets/app.js'
-    
-  });
-  });
+res.render('Liveagent_LACorp',{
+  jsPath: __dirname+'/assets/app.js'
   
-  // Get Endpoint
+});
+});
+
+// Get Endpoint
 
 app.get('/getmock',(req,res)=>{
-  res.send('getmock',{
-        "Status":200,
-        "Message": "You have successfully hit this endpoint"
+res.send('getmock',{
+      "Status":200,
+      "Message": "You have successfully hit this endpoint"
 
-  });
-  });
+});
+});
 
 // POST Mock
 
 app.post('/postmock',(req,res)=>{
-  console.log(req);
-  res.send('getmock',{
-    "Status":200,
-    "Message": req
-
+console.log(req);
+res.set('Content-Type', 'text/xml');
+res.send(xml('Request Success'));
 });
+
+
+
+app.get('/canvas',(req,res)=>{
+  res.render('canvas');
   });
 
-  app.get('/canvas',(req,res)=>{
-    res.render('canvas');
-    });
-
-  // POST endpoint for canvas app.
+// POST endpoint for canvas app.
 app.post('/signedrequest',(req,res)=>{
 
 // You could save this information in the user session if needed
@@ -78,10 +78,10 @@ instanceUrl = signedRequest.client.instanceUrl,
 query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Id = '" + context.environment.record.Id + "'",
 
 contactRequest = {
-  url: instanceUrl + '/services/data/v44.0/query?q=' + query,
-  headers: {
-      'Authorization': 'OAuth ' + oauthToken
-  }
+url: instanceUrl + '/services/data/v44.0/query?q=' + query,
+headers: {
+    'Authorization': 'OAuth ' + oauthToken
+}
 };
 
 request(contactRequest, function(err, response, body) {
@@ -90,7 +90,7 @@ res.setHeader("Expires", new Date(Date.now() + 31536000).toUTCString());
 res.render('canvas',{context: context});
 });
 
-    });
+  });
 
 app.set('view engine','hbs');
 

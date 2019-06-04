@@ -9,7 +9,8 @@
     "path": "^0.12.7",
     "request": "^2.88.0",
     "salesforce-signed-request": "0.0.1",
-    "sfdc": "0.0.1"
+    "sfdc": "0.0.1",
+    "xml": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
