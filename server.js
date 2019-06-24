@@ -42,6 +42,15 @@ res.render('Liveagent_LACorp',{
 });
 });
 
+
+// snapin chat page route
+
+app.get('/snapincasetest',(req,res)=>{
+  res.render('Snap23335950',{
+    jsPath: __dirname+'/assets/app.js'
+    
+  });
+  });
 // Get Endpoint
 
 app.get('/getmock',(req,res)=>{
