@@ -37,8 +37,8 @@ jsPath: __dirname+'/assets/app.js'
 
 app.get('/liveagentchat',(req,res)=>{
 res.render('Liveagent_LACorp',{
-  jsPath: __dirname+'/assets/app.js'
-  
+jsPath: __dirname+'/assets/app.js'
+
 });
 });
 
@@ -46,17 +46,17 @@ res.render('Liveagent_LACorp',{
 // snapin chat page route
 
 app.get('/snapincasetest',(req,res)=>{
-  res.render('Snap23335950',{
-    jsPath: __dirname+'/assets/app.js'
-    
-  });
-  });
+res.render('Snap23335950',{
+  jsPath: __dirname+'/assets/app.js'
+  
+});
+});
 // Get Endpoint
 
 app.get('/getmock',(req,res)=>{
-res.send('getmock',{
-      "Status":200,
-      "Message": "You have successfully hit this endpoint"
+res.status(200).send({
+  "Status":200,
+  "Message": "You have successfully hit this endpoint"
 
 });
 });
@@ -72,8 +72,8 @@ res.send(xml('Request Success'));
 
 
 app.get('/canvas',(req,res)=>{
-  res.render('canvas');
-  });
+res.render('canvas');
+});
 
 // POST endpoint for canvas app.
 app.post('/signedrequest',(req,res)=>{
@@ -89,7 +89,7 @@ query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Id = '"
 contactRequest = {
 url: instanceUrl + '/services/data/v44.0/query?q=' + query,
 headers: {
-    'Authorization': 'OAuth ' + oauthToken
+  'Authorization': 'OAuth ' + oauthToken
 }
 };
 
@@ -99,7 +99,7 @@ res.setHeader("Expires", new Date(Date.now() + 31536000).toUTCString());
 res.render('canvas',{context: context});
 });
 
-  });
+});
 
 app.set('view engine','hbs');
 
