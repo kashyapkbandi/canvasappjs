@@ -29,6 +29,12 @@ app.get('/elsite',(req,res)=>{
   });
 
 
+  
+app.post('/callback',(req,res)=>{
+  res.render('callback');
+  });
+
+
 
 app.get('',(req,res)=>{
 res.render('index');
