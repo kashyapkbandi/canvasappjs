@@ -28,7 +28,10 @@ app.get('/elsite',(req,res)=>{
   res.render('embeddedlogin');
   });
 
-
+  app.get('/callback',(req,res)=>{
+    res.render('callback');
+    });
+  
   
 app.post('/callback',(req,res)=>{
   res.render('callback');
