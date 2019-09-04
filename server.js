@@ -21,6 +21,15 @@ console.log(viewPath);
 
 app.set('views',viewPath);
 
+
+
+
+app.get('/elsite',(req,res)=>{
+  res.render('embeddedlogin');
+  });
+
+
+
 app.get('',(req,res)=>{
 res.render('index');
 });

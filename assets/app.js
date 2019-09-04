@@ -5,6 +5,5 @@ function handleBack(e){
 
   console.log("Hello");
 
-  window.history.back();
   e.preventDefault();
  }   
