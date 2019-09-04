@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
- <style>
+
+<style>
 body {
-    background-image:url('/assets/bg.jpg');
+background-image:url('/bg.jpg');
+background-color: #cccccc; /* Used if the image is unavailable */
+
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover; /* Resize the background image to cover the entire container */
 }
 
- </style>
+#submitButton
+{
+    background-color: #324860;
+    border-radius: 0px;
+    text-decoration-color: aliceblue;
+}
+
+</style>
 
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -22,15 +33,15 @@ body {
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Embedded Login Site</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submitButton">Login</button>
-  </form>
+<nav class="navbar navbar-light bg-light justify-content-between" style="background-color: transparent;">
+<a class="navbar-brand">Embedded Login Site</a>
+<form class="form-inline">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0 loginbutton" type="submit" id="submitButton">Login</button>
+</form>
 </nav>
 
- 
+
 
 
 
