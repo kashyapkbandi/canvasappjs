@@ -28,18 +28,32 @@ background-size: cover; /* Resize the background image to cover the entire conta
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>callback</title>
 
-
-
+<meta name="salesforce-allowed-domains" content="canvasappvf.herokuapp.com">
+  
+<meta name="salesforce-community" content="https://zsquad-developer-edition.ap15.force.com/elogin">
+    <meta name="salesforce-client-id" content="3MVG9Iu66FKeHhIPrRneLTDFdiuLfgLjycFpg6SbLpZAJScEXuD.oRdaWnJE7QGNFWHxunp0ut1">
+    <meta name="salesforce-mode" content="inline-callback">
+    <meta name="salesforce-save-access-token" content="false">
+    <meta name="salesforce-allowed-domains" content="canvasappvf.herokuapp.com">
+    <meta name="salesforce-redirect-uri" content="https://canvasappvf.herokuapp.com/callback">
+    <meta name="salesforce-target" content="#salesforce-login">
+    <meta name="salesforce-login-handler" content="onLogin">
+    <meta name="salesforce-logout-handler" content="onLogout">
+<script src="https://zsquad-developer-edition.ap15.force.com/elogin/servlet/
+            servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
 </head>
-<body>
 
 <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: transparent;">
 <a class="navbar-brand">callback</a>
 <form class="form-inline">
 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success my-2 my-sm-0 loginbutton" type="submit" id="submitButton">Login</button>
+
 </form>
 </nav>
+
+<body>
+
+
 
 
 
