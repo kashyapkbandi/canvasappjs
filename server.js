@@ -28,7 +28,8 @@ app.get('/elsite',(req,res)=>{
   res.render('embeddedlogin');
   });
 
-  app.get('/callback',(req,res)=>{
+
+app.get('/callback',(req,res)=>{
     res.render('callback');
     });
   
@@ -41,14 +42,6 @@ app.post('/callback',(req,res)=>{
 
 app.get('',(req,res)=>{
 res.render('index');
-});
-
-
-app.get('/page2',(req,res)=>{
-res.render('page2',{
-jsPath: __dirname+'/assets/app.js'
-
-});
 });
 
 // Live agent chat page route
@@ -69,6 +62,22 @@ res.render('Snap23335950',{
   
 });
 });
+
+
+// Interactionjs testing page
+
+app.get('/interactionjs',(req,res)=>{
+  res.render('Interaction');
+  });
+
+
+
+
+
+
+
+
+
 // Get Endpoint
 
 app.get('/getmock',(req,res)=>{

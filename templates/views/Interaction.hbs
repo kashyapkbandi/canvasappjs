@@ -7,47 +7,46 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<title>Live agent Chat</title>
+<title>Interaction.js Bench</title>
 
 
 
 
 
 </head>
-<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
 <a class="navbar-brand" href="#">Live agent Chat</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
 </button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</div>
 </nav>
 
-<script src="https://codestation-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
-
-<script>
-$Lightning.use("c:LtngApps", function() {
-  $Lightning.createComponent("c:TestComp",
-                             {},
-                             "lightning",
-                             function(cmp) {
-    // do some stuff
-  });
-},
-"https://codestation-dev-ed.lightning.force.com",  
-"00DB0000000E28u!AQsAQMYT3SB_R4N2f4VpjHdDbCVY6X._nQ_PPqfWvRm0tADtsonneds5yOfEp04ltbMiGJ623R4qVHEwDBM1Az33Ly5xuVvv");
-</script>
-
-<div id="lightning" />
-<!-- Optional JavaScript -->
+<body>
 
 
+
+<script src="https://lacorp-dev-ed.my.salesforce.com/support/console/46.0/integration.js"/>
+    
+
+    <script type="text/javascript">
+        function testSetStatus(statusId) {
+
+            //Sets the user’s presence status to statusID. Assumes that the user was assigned this presence status through Setup.
+            //These values are for example purposes only
+            sforce.console.presence.setServicePresenceStatus(statusId, function(result) { 
+                if (result.success) { 
+                    alert('Set status successful');
+                    alert('Current statusId is: ' + result.statusId);
+                    alert('Channel list attached to this status is: ' + result.channels); //printout in console for lists
+                } else {
+                    alert('Set status failed');
+                }
+           }); 
+        }
+    </script>
+
+
+<a href="#" onClick="testSetStatus('0N57F000000boYS');return false;">Set Presence Status</a> 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
