@@ -25,20 +25,30 @@ app.set('views',viewPath);
 
 
 app.get('/elsite',(req,res)=>{
-  res.render('embeddedlogin');
-  });
+res.render('embeddedlogin');
+});
 
 
 app.get('/callback',(req,res)=>{
-    res.render('callback');
-    });
-  
-  
-app.post('/callback',(req,res)=>{
   res.render('callback');
   });
 
 
+app.post('/callback',(req,res)=>{
+res.render('callback');
+});
+
+app.get('/redirectionPage',(req,res)=>{
+
+  window.setTimeout(function(){
+
+  // Move to a new location or you can do something else
+res.writeHead(301,{Location: 'https://lacorp-dev-ed--c.visualforce.com/apex/ReRouteTwo?accIdParam=0017F00002357mSQAQ'});
+res.end();
+  }, 2000);
+
+
+});
 
 app.get('',(req,res)=>{
 res.render('index');
@@ -58,8 +68,8 @@ jsPath: __dirname+'/assets/app.js'
 
 app.get('/snapincasetest',(req,res)=>{
 res.render('Snap23335950',{
-  jsPath: __dirname+'/assets/app.js'
-  
+jsPath: __dirname+'/assets/app.js'
+
 });
 });
 
@@ -67,8 +77,8 @@ res.render('Snap23335950',{
 // Interactionjs testing page
 
 app.get('/interactionjs',(req,res)=>{
-  res.render('Interaction');
-  });
+res.render('Interaction');
+});
 
 
 
@@ -82,8 +92,8 @@ app.get('/interactionjs',(req,res)=>{
 
 app.get('/getmock',(req,res)=>{
 res.status(200).send({
-  "Status":200,
-  "Message": "You have successfully hit this endpoint"
+"Status":200,
+"Message": "You have successfully hit this endpoint"
 
 });
 });
@@ -116,7 +126,7 @@ query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Id = '"
 contactRequest = {
 url: instanceUrl + '/services/data/v44.0/query?q=' + query,
 headers: {
-  'Authorization': 'OAuth ' + oauthToken
+'Authorization': 'OAuth ' + oauthToken
 }
 };
 
