@@ -42,12 +42,13 @@ app.get('/redirectionPage',(req,res)=>{
 
  
   // Move to a new location or you can do something else
-res.redirect('https://lacorp-dev-ed.my.salesforce.com/apex/ReRouteMid?accIdParam=0017F00002357mSQAQ&verified='+true);
-res.end();
+res.redirect('https://lacorp-dev-ed.my.salesforce.com/apex/ReRouteTwo?accIdParam=0017F00002357mSQAQ&verified='+true);
  
 
 
 });
+
+
 
 app.get('',(req,res)=>{
 res.render('index');
