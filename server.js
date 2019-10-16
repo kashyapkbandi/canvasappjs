@@ -42,7 +42,7 @@ app.get('/redirectionPage',(req,res)=>{
 
  
   // Move to a new location or you can do something else
-res.writeHead(301,{Location: 'https://lacorp-dev-ed--c.visualforce.com/apex/ReRouteTwo?accIdParam=0017F00002357mSQAQ&verified=true'});
+res.writeHead(301,{Location: 'https://lacorp-dev-ed.my.salesforce.com/apex/ReRouteTwo?accIdParam=0017F00002357mSQAQ&verified=true'});
 res.end();
  
 
