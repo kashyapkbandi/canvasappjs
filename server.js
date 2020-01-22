@@ -81,7 +81,14 @@ res.render('Interaction');
 });
 
 
+// Interactionjs testing page
 
+app.get('/article',(req,res)=>{
+  res.render('article');
+  });
+  
+  
+  
 
 
 
