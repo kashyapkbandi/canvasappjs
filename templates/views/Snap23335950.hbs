@@ -30,20 +30,26 @@
 
 
 {{!-- SNAPIN CODE --}}
+
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #7cd42d;
-		font-family: "Raleway Family", sans-serif;
+		background-color: #F74206;
+		font-family: "Salesforce Sans", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #7cd42d;
+		outline: 1px solid #F74206;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
+		url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.ttf') format('truetype');
 	}
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.displayHelpButton = false; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
@@ -65,25 +71,25 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://swiss-sense--acc.my.salesforce.com',
-			'https://acc-swiss-sense.cs108.force.com/liveAgentSetupFlow',
+			'https://lacorp-dev-ed.my.salesforce.com',
+			'https://lacorp-developer-edition.ap5.force.com/',
 			gslbBaseURL,
-			'00D1l0000000acX',
-			'Chats',
+			'00D7F000004CGf1',
+			'Snap_LiveChat',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2cs-fra.salesforceliveagent.com/content',
-				deploymentId: '5721l000000CaZG',
-				buttonId: '5731l000000Caax',
-				baseLiveAgentURL: 'https://d.la1-c2cs-fra.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1l000000CaXoEAK_16e4517ef58',
-				isOfflineSupportEnabled: false
+				baseLiveAgentContentURL: 'https://c.la1-c1-hnd.salesforceliveagent.com/content',
+				deploymentId: '5727F000000926J',
+				buttonId: '5737F0000008vgY',
+				baseLiveAgentURL: 'https://d.la1-c1-hnd.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7F000000Xb0qUAC_169bee7b916',
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://swiss-sense--acc.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://lacorp-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -93,6 +99,7 @@
 	}
 </script>
 
+{{! -- SNAPIN CODE END --}}
 
 </body>
 
