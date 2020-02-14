@@ -12,6 +12,29 @@
 
 
 
+<style>
+    .myButton {
+	background-color:#45b8c7;
+	border-radius:14px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:15px 29px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+    </style>
+
 
 </head>
 <body>
@@ -28,26 +51,34 @@
     </form>
 </div>
 </nav>
-
-<a id="liveagent_button_online_5732w000000LBBg" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5732w000000LBBg')">
-Click here to chat !</a>
-
-<div id="liveagent_button_offline_5732w000000LBBg" style="display: none;">
-Oops !No agents are available at the moment.
-</div><script type="text/javascript">
+    
+    <a id="liveagent_button_online_5732w000000LBBg" href="javascript://Chat" class="myButton" onclick="liveagent.startChat('5732w000000LBBg')">Chat now</a>
+    
+    
+    <div id="liveagent_button_offline_5732w000000LBBg" style="display: none;">
+        
+        Oops !    All agents are busy at this moment !
+        
+    </div>
+    
+    <script type="text/javascript">
+    
 if (!window._laq) { window._laq = []; 
-console.log(javascript://Chat);
-}
+                  console.log("javascript://Chat");}
 window._laq.push(function(){liveagent.showWhenOnline('5732w000000LBBg', document.getElementById('liveagent_button_online_5732w000000LBBg'));
 liveagent.showWhenOffline('5732w000000LBBg', document.getElementById('liveagent_button_offline_5732w000000LBBg'));
 });</script>
 
 
-
-<script type='text/javascript' src='https://c.la2-c2-ukb.salesforceliveagent.com/content/g/js/47.0/deployment.js'></script>
+    
+    
+   <script type='text/javascript' src='https://c.la2-c2-ukb.salesforceliveagent.com/content/g/js/47.0/deployment.js'></script>
 <script type='text/javascript'>
 liveagent.init('https://d.la2-c2-ukb.salesforceliveagent.com/chat', '5722w000000LA3T', '00D2w000001dAuc');
 </script>
+    
+    
+
 
 
 
