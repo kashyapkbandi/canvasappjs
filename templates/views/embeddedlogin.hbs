@@ -17,7 +17,7 @@ background-color: #324860;
 border-radius: 0px;
 text-decoration-color: aliceblue;
 }
- 
+
 
 </style>
 
@@ -64,9 +64,29 @@ text-decoration-color: aliceblue;
 margin-right: auto;">
 
 </div>
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Hit Token Endpoint</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML =
+    this.responseText;
+}
+};
+xhttp.open("POST", "https://login.salesforce.com/services/oauth2/token?grant_type=authorization_code&client_id=3MVG9SemV5D80oBcJvkgEo6QN2TIAeoWgXb2Rj85ZAniiiGDIJ4pkls9levEBDbmvAfcD4_Cf8ZPB5s0lZF1M&client_secret=304D1F42A5EB6979F631A64D40051F960E359A7BA00A940B983D1A7454826CF5&code=aPrxvW.r1Hp7pFYigdcvxlOjm0Ure4wxrnKLc8xZjcr5Nbbw.sG08.Lg4.iVGJPGujgmOR1Itg%3D%3D&redirect_uri=https://www.getpostman.com/oauth2/callback", true);
+xhttp.send();
+}
+</script>
+
+<div>
 
 
 
+</div>
 
 
 <script src="/app.js"> </script>
