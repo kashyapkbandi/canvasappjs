@@ -74,6 +74,9 @@ jsPath: __dirname+'/assets/app.js'
 });
 
 
+
+
+
 // Interactionjs testing page
 
 app.get('/interactionjs',(req,res)=>{
@@ -88,6 +91,9 @@ app.get('/article',(req,res)=>{
   });
   
   
+  app.get('/webtolead',(req,res)=>{
+    res.render('Web2Lead');
+  });
   
 
 
