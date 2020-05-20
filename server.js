@@ -96,6 +96,12 @@ app.get('/article',(req,res)=>{
   });
   
 
+//agents snap in testing page
+
+app.get('/agenttest',(req,res)=>{
+  res.render('AgentSnapinTestPage');
+});
+
 
 
 
