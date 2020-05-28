@@ -102,6 +102,9 @@ app.get('/agenttest',(req,res)=>{
   res.render('AgentSnapinTestPage');
 });
 
+app.get('/devweb2lead',(req,res)=>{
+  res.render('Web2LeadDevOrg');
+});
 
 
 
