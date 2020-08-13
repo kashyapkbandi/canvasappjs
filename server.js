@@ -73,7 +73,12 @@ jsPath: __dirname+'/assets/app.js'
 });
 });
 
+// POST ENDPOINT TO RECEIVE THE PAYLOAD AND DISPLAY IT IN THE FORM
 
+app.post('/poster',(req,res)=>{
+  res.render(req.body);
+  });
+  
 
 
 
