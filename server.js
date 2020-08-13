@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const decode = require('salesforce-signed-request');
 const request = require('request');
 var xml = require('xml');
+var bodyParser = require('body-parser')
 
 
 var app = express();
@@ -15,6 +16,12 @@ var  consumerSecret = 'EF99C5BD9FA0D1B66625ABA2A10302960F36EF23EB5E8D0E6936E6FA6
 
 app.use(express.static(__dirname + '/assets'));
 const viewPath = path.join(__dirname,'./templates/views');
+
+// parse application/json
+app.use(bodyParser.json())
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded())
 
 console.log(viewPath);
 // tell express to use templates instead of views. 
