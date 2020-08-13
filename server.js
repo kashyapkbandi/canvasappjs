@@ -84,7 +84,10 @@ jsPath: __dirname+'/assets/app.js'
 
 app.post('/poster',(req,res)=>{
   console.log('POSTER LOG----'+req.body);
-  res.send(req.body);
+  //res.send(req.body);
+res.render('poster',{requestdata:req.body})
+
+
   });
   
 
