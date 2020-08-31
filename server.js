@@ -17,6 +17,12 @@ var  consumerSecret = 'EF99C5BD9FA0D1B66625ABA2A10302960F36EF23EB5E8D0E6936E6FA6
 app.use(express.static(__dirname + '/assets'));
 const viewPath = path.join(__dirname,'./templates/views');
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // parse application/json
 app.use(bodyParser.json())
 
