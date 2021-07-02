@@ -37,6 +37,12 @@ app.set('views',viewPath);
 
 
 
+app.get('/webtoleadpage',(req,res)=>{
+  res.render('embeddedlogin');
+  });
+  
+  
+
 app.get('/elsite',(req,res)=>{
 res.render('embeddedlogin');
 });
