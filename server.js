@@ -38,14 +38,9 @@ app.set('views',viewPath);
 
 
 app.get('/webtoleadpage',(req,res)=>{
-  res.render('embeddedlogin');
-  });
-  
-  
-
-app.get('/elsite',(req,res)=>{
-res.render('embeddedlogin');
+res.render('webtolead');
 });
+
 
 
 app.get('/callback',(req,res)=>{
