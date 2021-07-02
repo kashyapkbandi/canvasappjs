@@ -114,7 +114,7 @@ app.get('/article',(req,res)=>{
   });
   
   
-  app.get('/webtolead',(req,res)=>{
+  app.get('/w2l',(req,res)=>{
     res.render('Web2Lead');
   });
   
