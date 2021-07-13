@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>SNAPIN Chat Testing</title>
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
@@ -30,6 +30,7 @@
 
 
 {{!-- SNAPIN CODE --}}
+
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
@@ -65,17 +66,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://omniservices-dev-ed.my.salesforce.com',
-			'https://omniserv-developer-edition.ap15.force.com',
+			'https://sdodev.my.salesforce.com',
+			'https://sdodemo-main-166ce2cf6b6-171-1713ed8f6d9.force.com/pportal',
 			gslbBaseURL,
-			'00D2v000001UbAA',
-			'EmbeddedService_NoBotSnapin',
+			'00D2x000000F2Xz',
+			'Support_Chat',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c1-ukb.salesforceliveagent.com/content',
-				deploymentId: '5722v000000YHVQ',
-				buttonId: '5732v000000YI3N',
-				baseLiveAgentURL: 'https://d.la1-c1-ukb.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I2v000000LBRmEAO_16ff120711c',
+				baseLiveAgentContentURL: 'https://c.la2-c2-ukb.salesforceliveagent.com/content',
+				deploymentId: '5722x000000H2Ny',
+				buttonId: '5732x000000H2gi',
+				baseLiveAgentURL: 'https://d.la2-c2-ukb.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I2x000000CeyiEAC_17aa07c0546',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -83,7 +84,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://omniservices-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://sdodev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
