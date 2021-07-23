@@ -36,6 +36,12 @@ app.set('views',viewPath);
 
 
 
+app.get('/opencti',(req,res)=>{
+  res.render('openctipage');
+  });
+  
+  
+
 
 app.get('/webtoleadpage',(req,res)=>{
 res.render('webtolead');

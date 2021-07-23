@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  type="text/javascript"  src="https://rev9-dev-ed.my.salesforce.com/support/api/51.0/lightning/opencti_min.js"></script>
+   <script  type="text/javascript"  src="https://rev9-dev-ed.my.salesforce.com/support/api/51.0/interaction.js"></script>
+
+   <script type="text/javascript">
+      	 var callback = function(response) {
+         if (response.success) {
+            console.log('API method call executed successfully! returnValue:', response.returnValue);
+         } else { 
+            console.error('Something went wrong! Errors:', response.errors);
+         }
+      	};
+       function searchAndScreenPop() {
+                //Invokes API method
+                sforce.opencti.searchAndScreenPop({ searchParams : "(512) 757-6000" , callType : sforce.opencti.CALL_TYPE.INBOUND,  deferred: false, callback : callback });
+        }
+    </script>
+
+    <title>OPEN CTI</title>
+</head>
+<body>
+        <button onclick="searchAndScreenPop();">searchAndScreenPop</button>
+
+    
+</body>
+</html>
