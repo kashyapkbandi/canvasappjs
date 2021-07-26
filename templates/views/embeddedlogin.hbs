@@ -33,19 +33,20 @@ text-decoration-color: aliceblue;
 <meta name="salesforce-logout-handler" content="onlogout">
 
 <meta name="salesforce-mode" content="inline">
-<meta name="salesforce-client-id" content="3MVG9G9pzCUSkzZubqf8adwzk0S6Pd3yRoa7UVjvkQVF..HBf8f7Vr9Qkcg.cAQgindqRnrA4MYLAhNVxDldE">
+<meta name="salesforce-client-id" content="3MVG9G9pzCUSkzZtdokuRcICTn5yJCeH9JxgDtWWJkb4Fl.bD26y7YpuVzvDddLUtyPDacS8gulle19e4YNyM">
 <meta name="salesforce-target" content="#loginForm">
 <meta name="salesforce-redirect-uri" content="https://canvasappvf.herokuapp.com/callback">
 
-<link href="https://zsquad-developer-edition.ap15.force.com/elogin/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" /> 
-<script src="https://zsquad-developer-edition.ap15.force.com/elogin/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script> 
+<link href="https://phantom-developer-edition.ap15.force.com/customerportal/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" /> 
+<script src="https://phantom-developer-edition.ap15.force.com/customerportal/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script> 
 
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Embedded Login Site</title>
 
-
+<link href="https://phantom-developer-edition.ap15.force.com/customerportal/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" /> 
+     <script src="https://phantom-developer-edition.ap15.force.com/customerportal/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script> 
 
 </head>
 <body>
@@ -65,26 +66,9 @@ margin-right: auto;">
 
 </div>
 <div id="demo">
-<button type="button" onclick="loadXMLDoc()">Hit Token Endpoint</button>
+<button type="button" onclick="login()">Hit Token Endpoint</button>
 </div>
-
-<script>
-function loadXMLDoc() {
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-    document.getElementById("demo").innerHTML =
-    this.responseText;
-}
-};
-<<<<<<< HEAD
-xhttp.open("POST", "https://login.salesforce.com/services/oauth2/token?grant_type=authorization_code&client_id=3MVG9SemV5D80oBcJvkgEo6QN2TIAeoWgXb2Rj85ZAniiiGDIJ4pkls9levEBDbmvAfcD4_Cf8ZPB5s0lZF1M&client_secret=304D1F42A5EB6979F631A64D40051F960E359A7BA00A940B983D1A7454826CF5&code=aPrxvW.r1Hp7pFYigdcvxlOjm5STRkVC4qhPStZnq4.sXBwEvPs3WUH_v7Hy2iIAD8IsKgkfRQ%3D%3D&redirect_uri=https://www.getpostman.com/oauth2/callback", true);
-=======
-xhttp.open("POST", "https://login.salesforce.com/services/oauth2/token?grant_type=authorization_code&client_id=3MVG9SemV5D80oBcJvkgEo6QN2TIAeoWgXb2Rj85ZAniiiGDIJ4pkls9levEBDbmvAfcD4_Cf8ZPB5s0lZF1M&client_secret=304D1F42A5EB6979F631A64D40051F960E359A7BA00A940B983D1A7454826CF5&code=aPrxvW.r1Hp7pFYigdcvxlOjm0Ure4wxrnKLc8xZjcr5Nbbw.sG08.Lg4.iVGJPGujgmOR1Itg%3D%3D&redirect_uri=https://www.getpostman.com/oauth2/callback", true);
->>>>>>> a58138db9e3bd99e32c47cc05ca8ce2cf5ff1257
-xhttp.send();
-}
-</script>
+ 
 
 <div>
 
