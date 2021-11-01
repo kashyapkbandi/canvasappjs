@@ -3,9 +3,14 @@
   <head>
 
   <script type="text/javascript">  
-     function OpenNewWindow(MyPath)  
+    function OpenNewWindow(MyPath)  
      {  
-        window.open(MyPath,"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");  
+     	let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=600,height=300,left=100,top=100`;
+
+        window.open(MyPath,"test",params);  
+
+
      }  
   </script>  
 <!-- Required meta tags -->
