@@ -46,7 +46,7 @@ res.render('embeddedlogin');
 });
 
 app.get('/lookuppage',(req,res)=>{
-  res.render('Lookup');
+  res.render('lookup');
   });
   
 
