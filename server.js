@@ -41,10 +41,14 @@ app.get('/opencti',(req,res)=>{
   });
   
   
-  app.get('/elsite',(req,res)=>{
-    res.render('embeddedlogin');
-    });
-    
+app.get('/elsite',(req,res)=>{
+res.render('embeddedlogin');
+});
+
+app.get('/lookuppage',(req,res)=>{
+  res.render('Lookup');
+  });
+  
 
 app.get('/webtoleadpage',(req,res)=>{
 res.render('webtolead');
