@@ -60,6 +60,10 @@ app.get('/callback',(req,res)=>{
   res.render('callback');
   });
 
+  app.get('/setagentstatus',(req,res)=>{
+    res.render('AgentStatusHandler');
+    });
+  
 
 app.post('/callback',(req,res)=>{
 res.render('callback');
