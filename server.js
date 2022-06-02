@@ -35,6 +35,10 @@ console.log(viewPath);
 app.set('views',viewPath);
 
 
+app.get('/mobilesite',(req,res)=>{
+  res.render('mobilesite');
+  });
+  
 
 app.get('/opencti',(req,res)=>{
   res.render('openctipage');
