@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
    <script type="text/javascript">
-      	 var callback = function(response) {
+     /* 	 var callback = function(response) {
          if (response.success) {
             console.log('API method call executed successfully! returnValue:', response.returnValue);
          } else { 
@@ -20,13 +20,35 @@
        function searchAndScreenPop() {
                 //Invokes API method
                 sforce.opencti.searchAndScreenPop({ searchParams : "(512) 757-6000" , callType : sforce.opencti.CALL_TYPE.INBOUND,  deferred: false, callback : callback });
+        }*/
+        var callback = function(response) {
+        if (response.success) {
+            console.log('API method call executed successfully after 7 secs! returnValue:', response.returnValue);
+        } else { 
+            console.error('Something went wrong! Errors:', response.errors);
         }
+    }; 
+    
+    function sscreenPop() {        
+        setTimeout(spop, 7000);
+    }
+    
+    function spop()
+    {
+        try {
+            sforce.opencti.searchAndScreenPop({ searchParams : 'Vin Steele', callType : sforce.opencti.CALL_TYPE.INBOUND,  deferred: false, callback : callback });
+        }
+        catch(e) {
+            console.log(e);
+        }
+    }
+    
     </script>
 
     <title>OPEN CTI</title>
 </head>
 <body>
-        <button class="btn btn-success" onclick="searchAndScreenPop();">searchAndScreenPop</button>
+        <button class="btn btn-success" onclick="sscreenPop();">searchAndScreenPop</button>
 
     
 </body>
